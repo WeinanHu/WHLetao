@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IhY-aj-ZMv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IhY-aj-ZMv">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -99,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="-101" y="150"/>
         </scene>
-        <!--Me Table View Controller-->
+        <!--我的-->
         <scene sceneID="XJW-sA-e6v">
             <objects>
                 <tableViewController id="iFF-55-RBp" customClass="WHMeTableViewController" sceneMemberID="viewController">
@@ -190,8 +189,11 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="pgt-c5-YXr" kind="push" id="uKq-6u-zWP"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DealDetailCell" rowHeight="70" id="c1T-CP-1Td">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DealDetailCell" rowHeight="70" id="c1T-CP-1Td">
                                         <rect key="frame" x="0.0" y="230" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c1T-CP-1Td" id="d6b-XM-AqA">
@@ -311,7 +313,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PacketDetailCell" rowHeight="70" id="lzT-da-IlB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PacketDetailCell" rowHeight="70" id="lzT-da-IlB">
                                         <rect key="frame" x="0.0" y="378" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lzT-da-IlB" id="7k5-FS-wxV">
@@ -340,7 +342,7 @@
                                                     <color key="textColor" red="0.61657395290000006" green="0.61657395290000006" blue="0.61657395290000006" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="余额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbc-OR-svD">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="礼品卡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbc-OR-svD">
                                                     <rect key="frame" x="107" y="39" width="50" height="17"/>
                                                     <animations/>
                                                     <constraints>
@@ -351,7 +353,7 @@
                                                     <color key="textColor" red="0.61657395290000006" green="0.61657395290000006" blue="0.61657395290000006" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVr-28-Euf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVr-28-Euf">
                                                     <rect key="frame" x="107" y="22" width="50" height="17"/>
                                                     <animations/>
                                                     <constraints>
@@ -362,7 +364,7 @@
                                                     <color key="textColor" red="0.61657395290000006" green="0.61657395290000006" blue="0.61657395290000006" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="余额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2am-d3-1jt">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="礼券" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2am-d3-1jt">
                                                     <rect key="frame" x="182" y="39" width="50" height="17"/>
                                                     <animations/>
                                                     <constraints>
@@ -373,7 +375,7 @@
                                                     <color key="textColor" red="0.61657395290000006" green="0.61657395290000006" blue="0.61657395290000006" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjR-UL-wDU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjR-UL-wDU">
                                                     <rect key="frame" x="182" y="22" width="50" height="17"/>
                                                     <animations/>
                                                     <constraints>
@@ -384,7 +386,7 @@
                                                     <color key="textColor" red="0.61657395290000006" green="0.61657395290000006" blue="0.61657395290000006" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="余额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXN-hU-0eo">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="积分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXN-hU-0eo">
                                                     <rect key="frame" x="248" y="39" width="50" height="17"/>
                                                     <animations/>
                                                     <constraints>
@@ -395,7 +397,7 @@
                                                     <color key="textColor" red="0.61657395290000006" green="0.61657395290000006" blue="0.61657395290000006" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu9-yW-any">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6540" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu9-yW-any">
                                                     <rect key="frame" x="248" y="22" width="50" height="17"/>
                                                     <animations/>
                                                     <constraints>
@@ -540,7 +542,11 @@
                             <outlet property="delegate" destination="iFF-55-RBp" id="a9K-YQ-ObK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kbi-KN-Q9t"/>
+                    <navigationItem key="navigationItem" title="我的" id="kbi-KN-Q9t">
+                        <barButtonItem key="rightBarButtonItem" image="me_setting" id="Vae-aE-KbC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="myCell" destination="EiZ-Nv-xB2" id="BEb-KI-NHU"/>
                         <outlet property="secondConstraint" destination="7ha-0J-tZl" id="6Kk-Pn-A77"/>
@@ -550,6 +556,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOZ-r6-HiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="412" y="826"/>
+        </scene>
+        <!--登录-->
+        <scene sceneID="DWV-bz-7CD">
+            <objects>
+                <viewController id="pgt-c5-YXr" customClass="WHLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rdv-yQ-4JR"/>
+                        <viewControllerLayoutGuide type="bottom" id="sLb-9R-Hw1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FNf-ez-4RM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xep-aq-xrk">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_field_background" translatesAutoresizingMaskIntoConstraints="NO" id="dfK-fs-Lno">
+                                        <rect key="frame" x="10" y="8" width="298" height="55"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_field_background" translatesAutoresizingMaskIntoConstraints="NO" id="xOY-0E-L6b">
+                                        <rect key="frame" x="11" y="71" width="297" height="55"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_me" translatesAutoresizingMaskIntoConstraints="NO" id="xhb-VV-rfr">
+                                        <rect key="frame" x="18" y="23" width="25" height="25"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_lock" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-Tr-tc8">
+                                        <rect key="frame" x="18" y="86" width="25" height="25"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqR-qy-gFb">
+                                        <rect key="frame" x="75" y="14" width="195" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_line" translatesAutoresizingMaskIntoConstraints="NO" id="KKe-Em-QLw">
+                                        <rect key="frame" x="-5" y="178" width="328" height="14"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="腾讯QQ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ub-Nw-OnA">
+                                        <rect key="frame" x="24" y="363" width="60" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mf-5Q-ULa">
+                                        <rect key="frame" x="252" y="308" width="50" height="50"/>
+                                        <state key="normal" backgroundImage="login_wechat"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微信" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6x-es-9kO">
+                                        <rect key="frame" x="252" y="363" width="60" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKd-gG-dod">
+                                        <rect key="frame" x="186" y="305" width="50" height="50"/>
+                                        <state key="normal" backgroundImage="login_sina"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新浪微博" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtm-i3-RRs">
+                                        <rect key="frame" x="181" y="363" width="60" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L77-CH-lCh">
+                                        <rect key="frame" x="102" y="305" width="50" height="50"/>
+                                        <state key="normal" backgroundImage="login_alibaba"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="支付宝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6S-Gx-gyE">
+                                        <rect key="frame" x="97" y="363" width="60" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmC-jF-5n9">
+                                        <rect key="frame" x="8" y="141" width="304" height="29"/>
+                                        <state key="normal" title="登录" backgroundImage="login_btn">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0c-EA-cpM">
+                                        <rect key="frame" x="233" y="263" width="75" height="30"/>
+                                        <state key="normal" title="忘记密码？">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgF-g2-gAE">
+                                        <rect key="frame" x="18" y="305" width="50" height="50"/>
+                                        <state key="normal" backgroundImage="login_qq"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8f-vx-ulJ">
+                                        <rect key="frame" x="75" y="77" width="222" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="登录" id="eFh-ko-99k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZhX-7l-91R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815" y="826"/>
         </scene>
         <!--Business View Controller-->
         <scene sceneID="lHG-Jk-cMi">
@@ -586,7 +695,7 @@
         <!--Item-->
         <scene sceneID="L1I-32-GOA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zFV-pF-Ygm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zFV-pF-Ygm" customClass="WHBaseNaviController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="icon_tabbar_mine" selectedImage="icon_tabbar_mine_selected" id="AMb-E3-n0J"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rPr-sj-NCQ">
@@ -611,6 +720,15 @@
         <image name="icon_tabbar_merchant_selected" width="21" height="18"/>
         <image name="icon_tabbar_mine" width="19" height="20"/>
         <image name="icon_tabbar_mine_selected" width="19" height="20"/>
+        <image name="login_alibaba" width="38" height="38"/>
+        <image name="login_btn" width="250" height="44"/>
+        <image name="login_field_background" width="250" height="44"/>
+        <image name="login_line" width="250" height="10"/>
+        <image name="login_lock" width="16" height="17"/>
+        <image name="login_me" width="19" height="20"/>
+        <image name="login_qq" width="38" height="38"/>
+        <image name="login_sina" width="39" height="38"/>
+        <image name="login_wechat" width="39" height="38"/>
         <image name="me_background" width="320" height="88"/>
         <image name="me_bag" width="14" height="15"/>
         <image name="me_collection" width="16" height="15"/>
@@ -620,6 +738,7 @@
         <image name="me_goods" width="23" height="21"/>
         <image name="me_packet" width="17" height="14"/>
         <image name="me_pay" width="23" height="19"/>
+        <image name="me_setting" width="19" height="18"/>
         <image name="me_superman" width="66" height="66"/>
     </resources>
 </document>

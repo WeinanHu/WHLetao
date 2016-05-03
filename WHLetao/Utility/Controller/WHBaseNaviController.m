@@ -17,6 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, -20, [UIScreen mainScreen].bounds.size.width, 20)];
+    view.backgroundColor = [UIColor redColor];
+    [self.navigationBar addSubview:view];
+    self.navigationBar.backgroundColor = [UIColor redColor];
+    
+    [self.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
+    self.navigationBar.barStyle = UIBarStyleBlackOpaque;
     //验证所有订单数据
     DPAPI *api = [[DPAPI alloc]init];
     NSMutableDictionary *paramsDic = [NSMutableDictionary dictionary];
@@ -41,7 +48,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    
+    return UIStatusBarStyleDefault;
+    
+}
 /*
 #pragma mark - Navigation
 

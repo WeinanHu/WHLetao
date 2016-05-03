@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D34B3A21CD901B600687464 /* WHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D34B3A11CD901B600687464 /* WHLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B0E305D61CD87A62003FB6DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E305D51CD87A62003FB6DC /* main.m */; };
 		B0E305D91CD87A62003FB6DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E305D81CD87A62003FB6DC /* AppDelegate.m */; };
 		B0E305DF1CD87A62003FB6DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E305DD1CD87A62003FB6DC /* Main.storyboard */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D34B3A01CD901B600687464 /* WHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHLoginViewController.h; sourceTree = "<group>"; };
+		2D34B3A11CD901B600687464 /* WHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHLoginViewController.m; sourceTree = "<group>"; };
 		B0E305D11CD87A62003FB6DC /* WHLetao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHLetao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E305D51CD87A62003FB6DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0E305D71CD87A62003FB6DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 			children = (
 				B0E306101CD89252003FB6DC /* WHMeTableViewController.h */,
 				B0E306111CD89252003FB6DC /* WHMeTableViewController.m */,
+				2D34B3A01CD901B600687464 /* WHLoginViewController.h */,
+				2D34B3A11CD901B600687464 /* WHLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,7 +331,7 @@
 				TargetAttributes = {
 					B0E305D01CD87A62003FB6DC = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = R6G77K9LS4;
+						DevelopmentTeam = MD98VBR744;
 					};
 				};
 			};
@@ -371,6 +376,7 @@
 				B0E306061CD87E69003FB6DC /* DPRequest.m in Sources */,
 				B0E306051CD87E69003FB6DC /* DPAPI.m in Sources */,
 				B0E306121CD89252003FB6DC /* WHMeTableViewController.m in Sources */,
+				2D34B3A21CD901B600687464 /* WHLoginViewController.m in Sources */,
 				B0E305D91CD87A62003FB6DC /* AppDelegate.m in Sources */,
 				B0E3060C1CD8908D003FB6DC /* WHMainTabBarController.m in Sources */,
 				B0E3061C1CD89810003FB6DC /* WHDeal.m in Sources */,
@@ -487,7 +493,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WHLetao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wayne.WHLetao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,7 +506,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WHLetao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wayne.WHLetao;
 				PRODUCT_NAME = "$(TARGET_NAME)";

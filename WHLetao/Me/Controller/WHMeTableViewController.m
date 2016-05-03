@@ -12,22 +12,28 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *myCell;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *thirdConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondConstraint;
+@property (nonatomic,assign) NSInteger constraintConstant;
 
 @end
 
 @implementation WHMeTableViewController
 -(void)updateViewConstraints{
-    self.secondConstraint.constant= ([UIScreen mainScreen].bounds.size.width-22*2-50*4)/3;
+    if (self.secondConstraint.constant== self.constraintConstant) {
+        return;
+    }
+    self.secondConstraint.constant= self.constraintConstant;
     self.thirdConstraint.constant = self.secondConstraint.constant;
     [super updateViewConstraints];
     
 }
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
+    self.constraintConstant =([UIScreen mainScreen].bounds.size.width-22*2-50*4)/3;
     [self updateViewConstraints];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 //    self.view.autoresizesSubviews = YES;
     self.myCell.backgroundColor = [UIColor clearColor];
     
@@ -98,8 +104,10 @@
 //    
 //    return cell;
 //}
-
-
+//
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
