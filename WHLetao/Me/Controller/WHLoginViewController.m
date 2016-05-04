@@ -18,7 +18,7 @@
 @implementation WHLoginViewController
 -(void)updateViewConstraints{
     [super updateViewConstraints];
-    self.constraintConstant =([UIScreen mainScreen].bounds.size.width-16*2-50*4)/3;
+    self.constraintConstant =([UIScreen mainScreen].bounds.size.width-20*2-50*4)/3;
     if (self.secondConstraint.constant== self.constraintConstant) {
         return;
     }
@@ -33,7 +33,7 @@
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem.title = @"取消";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(userRegister)];
-    // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 -(void)userRegister{
     

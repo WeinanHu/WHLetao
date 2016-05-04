@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DPAPI.h"
+#import "WHMetaDataTool.h"
+#import "MJRefresh.h"
+@interface WHBaseTableTableViewController : UIViewController
+-(void)settingRequestParams:(NSMutableDictionary*)params;
+@property(nonatomic,strong) NSMutableArray *dealsArray;
 
-@interface WHBaseTableTableViewController : UITableViewController
+@property(nonatomic,assign) NSInteger page;
+@property(nonatomic,strong) UITableView *tableView;
+
 
 @end

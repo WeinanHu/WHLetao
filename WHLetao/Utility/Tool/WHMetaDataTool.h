@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "WHDeal.h"
+#import "WHSort.h"
 @interface WHMetaDataTool : NSObject
 //给定服务器返回的result数据（字典），返回所有订单模型对象组成的数组（TRDeal）
 +(NSArray*)parseDealsResult:(id)result;
++(NSArray*)getAllSorts;
 @end

@@ -23,6 +23,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)settingRequestParams:(NSMutableDictionary*)params{
+#warning TODO:设置城市和分类
+    params[@"city"]     = @"北京";
+    params[@"category"] = @"美食";}
 
 /*
 #pragma mark - Navigation

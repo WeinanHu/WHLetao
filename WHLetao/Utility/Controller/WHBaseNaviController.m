@@ -7,9 +7,8 @@
 //
 
 #import "WHBaseNaviController.h"
-#import "DPAPI.h"
-#import "WHMetaDataTool.h"
-@interface WHBaseNaviController ()<DPRequestDelegate>
+
+@interface WHBaseNaviController ()
 
 @end
 
@@ -17,32 +16,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, -20, [UIScreen mainScreen].bounds.size.width, 20)];
-    view.backgroundColor = [UIColor redColor];
-    [self.navigationBar addSubview:view];
-    self.navigationBar.backgroundColor = [UIColor redColor];
+//    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, -20, [UIScreen mainScreen].bounds.size.width, 20)];
+//    view.backgroundColor = [UIColor redColor];
+//    [self.navigationBar addSubview:view];
+    [self.navigationBar setBarTintColor:[UIColor colorWithRed:0.902 green:0.224 blue:0.239 alpha:1.000]];
     
-    [self.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
-    self.navigationBar.barStyle = UIBarStyleBlackOpaque;
-    //验证所有订单数据
-    DPAPI *api = [[DPAPI alloc]init];
-    NSMutableDictionary *paramsDic = [NSMutableDictionary dictionary];
-    paramsDic[@"city"]=@"北京" ;
-    [api requestWithURL:@"v1/deal/find_deals" params:paramsDic delegate:self];
+    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+//    [self.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
+//    if ([[WHBaseNaviController class] respondsToSelector:@selector(appearance)])
+//    {
+//        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed: 4.0/255.0 green:173.0/255.0 blue:214.0/255.0 alpha:1.0f ]]; //// change background color of navigationBar
+//        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; /// set backButton color of navigation bar
+//        [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}]; // set title color
+////        [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor,nil] forState:UIControlStateNormal];  /// set all barButton item color
+//        self.navigationBar.translucent = NO;// set translucent NO
+//    }
+//    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    self.navigationItem.titleView.tintColor = [UIColor whiteColor];
+    
+//    self.navigationBar.barStyle = UIBarStyleBlackOpaque;
+//    //验证所有订单数据
+//    DPAPI *api = [[DPAPI alloc]init];
+//    NSMutableDictionary *paramsDic = [NSMutableDictionary dictionary];
+//    paramsDic[@"city"]=@"北京" ;
+    
 //    [self sendRequestToServer];
     // Do any additional setup after loading the view.
-}
-#pragma mark - DPRequest delegate
--(void)request:(DPRequest *)request didFinishLoadingWithResult:(id)result{
-    //成功
-    NSLog(@"%@",result);
-    NSArray *dealsArray = [WHMetaDataTool parseDealsResult:result];
-    NSLog(@"%@",dealsArray);
-    
-}
--(void)request:(DPRequest *)request didFailWithError:(NSError *)error{
-    //失败
-    NSLog(@"%@",error.userInfo);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
