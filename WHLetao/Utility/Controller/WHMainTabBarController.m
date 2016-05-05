@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.tabBar.tintColor = [UIColor colorFromHexCode:@"eb5352"];
+//    //tabbar文字颜色
+//    [self.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorFromHexCode:@"eb5352"]} forState:UIControlStateHighlighted];
+//    //tabbarItem图片维持原有样式
+//    self.tabBarItem.selectedImage = [self.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     // Do any additional setup after loading the view.
 }
 

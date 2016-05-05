@@ -13,26 +13,35 @@
 #import "WHSortViewController.h"
 #import "WHRegionViewController.h"
 #import "WHCategoryViewController.h"
-
+#import "WHSearchViewController.h"
 #import "WHMetaDataTool.h"
 @interface WHBusinessViewController ()<UIPopoverPresentationControllerDelegate>
 @property(nonatomic,strong) WHBusinessHeaderView *headerView;
 @property(nonatomic,strong) WHSortViewController *sortController;
 @property(nonatomic,strong) WHRegionViewController *regionController;
 @property(nonatomic,strong) WHCategoryViewController *categoryController;
-
+@property(nonatomic,strong) WHSearchViewController *searchController;
 @property(nonatomic,strong) NSArray *sorts;
 @end
 
 @implementation WHBusinessViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.y = 50;
     [self setUpHeadView];
     [self addTargetsForButton];
+    [self addSearchButton];
 }
 #pragma mark - button
+-(void)addSearchButton{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_search"] style:UIBarButtonItemStyleDone target:self action:@selector(clickSearchButton)];
+    
+}
+-(void)clickSearchButton{
+    [self.navigationController pushViewController:self.searchController animated:YES];
+}
 -(void)addTargetsForButton{
     [self.headerView.sortButton addTarget:self action:@selector(clickSortButton) forControlEvents:UIControlEventTouchUpInside];
     [self.headerView.regionButton addTarget:self action:@selector(clickRegionButton) forControlEvents:UIControlEventTouchUpInside];
@@ -131,6 +140,13 @@
 		_sorts = [WHMetaDataTool getAllSorts];
 	}
 	return _sorts;
+}
+
+- (WHSearchViewController *)searchController {
+	if(_searchController == nil) {
+		_searchController = [[WHSearchViewController alloc] init];
+	}
+	return _searchController;
 }
 
 @end

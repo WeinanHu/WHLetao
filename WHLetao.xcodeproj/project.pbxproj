@@ -74,6 +74,13 @@
 		B00D7B5E1CD9A2430090723C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B00D7B1E1CD9A2430090723C /* UIView+WebCacheOperation.m */; };
 		B00D7B621CD9B73E0090723C /* WHMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B00D7B601CD9B73E0090723C /* WHMainTableViewCell.m */; };
 		B00D7B631CD9B73E0090723C /* WHMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00D7B611CD9B73E0090723C /* WHMainTableViewCell.xib */; };
+		B015BD631CDAD8FD0071EA31 /* WHRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = B015BD621CDAD8FD0071EA31 /* WHRegion.m */; };
+		B015BD661CDAD9400071EA31 /* WHCity.m in Sources */ = {isa = PBXBuildFile; fileRef = B015BD651CDAD9400071EA31 /* WHCity.m */; };
+		B015BD691CDAED320071EA31 /* WHMetaDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = B015BD681CDAED320071EA31 /* WHMetaDataView.m */; };
+		B015BD6B1CDAED3E0071EA31 /* WHMetaDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B015BD6A1CDAED3E0071EA31 /* WHMetaDataView.xib */; };
+		B015BD6F1CDAF85B0071EA31 /* WHMetaDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B015BD6D1CDAF85B0071EA31 /* WHMetaDataTableViewCell.m */; };
+		B015BD731CDB22C60071EA31 /* WHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B015BD721CDB22C60071EA31 /* WHCategory.m */; };
+		B015BD761CDB39FF0071EA31 /* WHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B015BD751CDB39FF0071EA31 /* WHSearchViewController.m */; };
 		B05D47D41CD9D2B0007D78CB /* WHBusinessHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B05D47D31CD9D2B0007D78CB /* WHBusinessHeaderView.m */; };
 		B05D47D61CD9D2C1007D78CB /* WHBusinessHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05D47D51CD9D2C1007D78CB /* WHBusinessHeaderView.xib */; };
 		B05D47D91CD9D865007D78CB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B05D47D81CD9D865007D78CB /* UIView+Extension.m */; };
@@ -237,6 +244,19 @@
 		B00D7B5F1CD9B73E0090723C /* WHMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHMainTableViewCell.h; sourceTree = "<group>"; };
 		B00D7B601CD9B73E0090723C /* WHMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHMainTableViewCell.m; sourceTree = "<group>"; };
 		B00D7B611CD9B73E0090723C /* WHMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHMainTableViewCell.xib; sourceTree = "<group>"; };
+		B015BD611CDAD8FD0071EA31 /* WHRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHRegion.h; sourceTree = "<group>"; };
+		B015BD621CDAD8FD0071EA31 /* WHRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHRegion.m; sourceTree = "<group>"; };
+		B015BD641CDAD9400071EA31 /* WHCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHCity.h; sourceTree = "<group>"; };
+		B015BD651CDAD9400071EA31 /* WHCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHCity.m; sourceTree = "<group>"; };
+		B015BD671CDAED320071EA31 /* WHMetaDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHMetaDataView.h; sourceTree = "<group>"; };
+		B015BD681CDAED320071EA31 /* WHMetaDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHMetaDataView.m; sourceTree = "<group>"; };
+		B015BD6A1CDAED3E0071EA31 /* WHMetaDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHMetaDataView.xib; sourceTree = "<group>"; };
+		B015BD6C1CDAF85B0071EA31 /* WHMetaDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHMetaDataTableViewCell.h; sourceTree = "<group>"; };
+		B015BD6D1CDAF85B0071EA31 /* WHMetaDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHMetaDataTableViewCell.m; sourceTree = "<group>"; };
+		B015BD711CDB22C60071EA31 /* WHCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHCategory.h; sourceTree = "<group>"; };
+		B015BD721CDB22C60071EA31 /* WHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHCategory.m; sourceTree = "<group>"; };
+		B015BD741CDB39FF0071EA31 /* WHSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHSearchViewController.h; sourceTree = "<group>"; };
+		B015BD751CDB39FF0071EA31 /* WHSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHSearchViewController.m; sourceTree = "<group>"; };
 		B05D47D21CD9D2B0007D78CB /* WHBusinessHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHBusinessHeaderView.h; sourceTree = "<group>"; };
 		B05D47D31CD9D2B0007D78CB /* WHBusinessHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHBusinessHeaderView.m; sourceTree = "<group>"; };
 		B05D47D51CD9D2C1007D78CB /* WHBusinessHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHBusinessHeaderView.xib; sourceTree = "<group>"; };
@@ -607,6 +627,8 @@
 				B05D47FB1CD9F89B007D78CB /* WHRegionViewController.m */,
 				B05D47FD1CD9F8A7007D78CB /* WHCategoryViewController.h */,
 				B05D47FE1CD9F8A7007D78CB /* WHCategoryViewController.m */,
+				B015BD741CDB39FF0071EA31 /* WHSearchViewController.h */,
+				B015BD751CDB39FF0071EA31 /* WHSearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -616,6 +638,12 @@
 			children = (
 				B05D47F11CD9E656007D78CB /* WHSort.h */,
 				B05D47F21CD9E656007D78CB /* WHSort.m */,
+				B015BD611CDAD8FD0071EA31 /* WHRegion.h */,
+				B015BD621CDAD8FD0071EA31 /* WHRegion.m */,
+				B015BD641CDAD9400071EA31 /* WHCity.h */,
+				B015BD651CDAD9400071EA31 /* WHCity.m */,
+				B015BD711CDB22C60071EA31 /* WHCategory.h */,
+				B015BD721CDB22C60071EA31 /* WHCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -626,6 +654,11 @@
 				B05D47D21CD9D2B0007D78CB /* WHBusinessHeaderView.h */,
 				B05D47D31CD9D2B0007D78CB /* WHBusinessHeaderView.m */,
 				B05D47D51CD9D2C1007D78CB /* WHBusinessHeaderView.xib */,
+				B015BD671CDAED320071EA31 /* WHMetaDataView.h */,
+				B015BD681CDAED320071EA31 /* WHMetaDataView.m */,
+				B015BD6A1CDAED3E0071EA31 /* WHMetaDataView.xib */,
+				B015BD6C1CDAF85B0071EA31 /* WHMetaDataTableViewCell.h */,
+				B015BD6D1CDAF85B0071EA31 /* WHMetaDataTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -866,6 +899,7 @@
 				B00D7B631CD9B73E0090723C /* WHMainTableViewCell.xib in Resources */,
 				B05D47D61CD9D2C1007D78CB /* WHBusinessHeaderView.xib in Resources */,
 				B00D7B391CD9A2430090723C /* Lato-Regular.ttf in Resources */,
+				B015BD6B1CDAED3E0071EA31 /* WHMetaDataView.xib in Resources */,
 				B05D47EF1CD9E546007D78CB /* PortalSettings.plist in Resources */,
 				B05D47EC1CD9E546007D78CB /* menuData.plist in Resources */,
 				B05D47E91CD9E546007D78CB /* citydata.plist in Resources */,
@@ -902,9 +936,13 @@
 				B00D7B221CD9A2430090723C /* FUIPopoverBackgroundView.m in Sources */,
 				B00D7B3C1CD9A2430090723C /* MJRefreshAutoFooter.m in Sources */,
 				B00D7B551CD9A2430090723C /* SDWebImageDownloaderOperation.m in Sources */,
+				B015BD661CDAD9400071EA31 /* WHCity.m in Sources */,
 				B00D7B2A1CD9A2430090723C /* UIImage+FlatUI.m in Sources */,
+				B015BD761CDB39FF0071EA31 /* WHSearchViewController.m in Sources */,
+				B015BD631CDAD8FD0071EA31 /* WHRegion.m in Sources */,
 				B00D7B501CD9A2430090723C /* NSData+ImageContentType.m in Sources */,
 				B00D7B571CD9A2430090723C /* SDWebImagePrefetcher.m in Sources */,
+				B015BD691CDAED320071EA31 /* WHMetaDataView.m in Sources */,
 				B0E306051CD87E69003FB6DC /* DPAPI.m in Sources */,
 				B00D7B2F1CD9A2430090723C /* UIStepper+FlatUI.m in Sources */,
 				B00D7B341CD9A2430090723C /* README.markdown in Sources */,
@@ -915,6 +953,7 @@
 				B05D47D91CD9D865007D78CB /* UIView+Extension.m in Sources */,
 				B00D7B281CD9A2430090723C /* UIColor+FlatUI.m in Sources */,
 				B00D7B471CD9A2430090723C /* MJRefreshGifHeader.m in Sources */,
+				B015BD6F1CDAF85B0071EA31 /* WHMetaDataTableViewCell.m in Sources */,
 				B00D7B291CD9A2430090723C /* UIFont+FlatUI.m in Sources */,
 				B00D7B431CD9A2430090723C /* MJRefreshAutoStateFooter.m in Sources */,
 				B00D7B231CD9A2430090723C /* FUISegmentedControl.m in Sources */,
@@ -929,6 +968,7 @@
 				B00D7B211CD9A2430090723C /* FUICellBackgroundView.m in Sources */,
 				B00D7B411CD9A2430090723C /* MJRefreshAutoGifFooter.m in Sources */,
 				B05D47F31CD9E656007D78CB /* WHSort.m in Sources */,
+				B015BD731CDB22C60071EA31 /* WHCategory.m in Sources */,
 				B00D7B3B1CD9A2430090723C /* MBProgressHUD.m in Sources */,
 				B00D7B4E1CD9A2430090723C /* UIView+MJExtension.m in Sources */,
 				2D34B3A21CD901B600687464 /* WHLoginViewController.m in Sources */,

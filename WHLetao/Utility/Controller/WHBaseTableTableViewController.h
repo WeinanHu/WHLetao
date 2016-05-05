@@ -17,5 +17,5 @@
 @property(nonatomic,assign) NSInteger page;
 @property(nonatomic,strong) UITableView *tableView;
 
-
+-(void)loadNewDeals;
 @end

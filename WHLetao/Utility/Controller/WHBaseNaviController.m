@@ -7,7 +7,7 @@
 //
 
 #import "WHBaseNaviController.h"
-
+#import "UIColor+FlatUI.h"
 @interface WHBaseNaviController ()
 
 @end
@@ -20,7 +20,7 @@
 //    view.backgroundColor = [UIColor redColor];
 //    [self.navigationBar addSubview:view];
     [self.navigationBar setBarTintColor:[UIColor colorWithRed:0.902 green:0.224 blue:0.239 alpha:1.000]];
-    
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 //    [self.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
 //    if ([[WHBaseNaviController class] respondsToSelector:@selector(appearance)])
@@ -42,6 +42,14 @@
     
 //    [self sendRequestToServer];
     // Do any additional setup after loading the view.
+    
+    //修改tabBarItem的图片维持原样
+    self.tabBarItem.selectedImage = [self.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    //修改tabBarItem的选中文本的颜色
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorFromHexCode:@"eb5352"]} forState:UIControlStateSelected];
+    //tabbar
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

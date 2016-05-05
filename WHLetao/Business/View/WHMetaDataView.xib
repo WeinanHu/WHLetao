@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WHMetaDataView">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="330"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qxd-r1-mQC">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="330"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vQ4-vn-tRf">
+                    <rect key="frame" x="100" y="0.0" width="100" height="330"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qxd-r1-mQC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6c7-G8-jZS"/>
+                <constraint firstItem="vQ4-vn-tRf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="82T-Wi-dMu"/>
+                <constraint firstItem="qxd-r1-mQC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IkQ-4k-8P8"/>
+                <constraint firstItem="vQ4-vn-tRf" firstAttribute="width" secondItem="qxd-r1-mQC" secondAttribute="width" id="Mgt-qg-iwz"/>
+                <constraint firstAttribute="bottom" secondItem="qxd-r1-mQC" secondAttribute="bottom" id="Zj1-U7-StX"/>
+                <constraint firstItem="vQ4-vn-tRf" firstAttribute="leading" secondItem="qxd-r1-mQC" secondAttribute="trailing" id="b3S-Xn-gAU"/>
+                <constraint firstAttribute="trailing" secondItem="vQ4-vn-tRf" secondAttribute="trailing" id="hdD-d0-hJW"/>
+                <constraint firstAttribute="bottom" secondItem="vQ4-vn-tRf" secondAttribute="bottom" id="qDa-Yk-9Qe"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainTableView" destination="qxd-r1-mQC" id="Upx-kN-9MU"/>
+                <outlet property="subTableView" destination="vQ4-vn-tRf" id="N4t-ji-NhI"/>
+            </connections>
+            <point key="canvasLocation" x="316" y="168"/>
+        </view>
+    </objects>
+</document>
