@@ -23,6 +23,13 @@
     //3.返回
     return [mutaArr copy];
 }
+static NSArray *cityGroupsArray = nil;
++(NSArray*)getALLCityGroups{
+    if (!cityGroupsArray) {
+        cityGroupsArray = [[self alloc]getAndParseWithPlistFile:@"cityGroups.plist" withClass:[WHCityGroup class]];
+    }
+    return cityGroupsArray;
+}
 static NSArray *sortArray = nil;
 +(NSArray *)getAllSorts{
     if (!sortArray) {

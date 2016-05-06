@@ -8,6 +8,8 @@
 
 #import "WHBaseTableTableViewController.h"
 #import "WHMainTableViewCell.h"
+#import "UIView+Extension.h"
+
 @interface WHBaseTableTableViewController ()<DPRequestDelegate,UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong) DPRequest *latestRequest;
 @end
@@ -15,11 +17,15 @@
 @implementation WHBaseTableTableViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.page = 1;
-//    [self sendRequestToServer];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    //    [self sendRequestToServer];
     [self setUpTableView];
     
     [self setUpRefresh];
+    
+    self.page = 1;
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -83,11 +89,13 @@
     [self.tableView.mj_header endRefreshing];
     [self.tableView.mj_footer endRefreshing];
 }
+#pragma mark - tableView
 -(void)setUpTableView{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
+    self.tableView.y += 64;
     [self.tableView registerNib:[UINib nibWithNibName:@"WHMainTableViewCell" bundle:nil] forCellReuseIdentifier:@"dealCell"];
 }
 -(void)settingRequestParams:(NSMutableDictionary*)params{
@@ -111,7 +119,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 120;
+    return 100;
 }
 /*
 // Override to support conditional editing of the table view.

@@ -7,8 +7,10 @@
 //
 
 #import "WHHomeViewController.h"
-
+#import "TRLocationManager.h"
+#import "WHCityGroupTableViewController.h"
 @interface WHHomeViewController ()
+@property(nonatomic,strong) NSString *cityName;
 
 @end
 
@@ -16,17 +18,55 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"城市" style:UIBarButtonItemStyleDone target:self action:@selector(clickCityButton)];
+    [self getUserLocation];
+    
+    
+    
+    
     // Do any additional setup after loading the view.
 }
-
+-(void)getUserLocation{
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"UserLocationCity"]) {
+        self.cityName = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserLocationCity"];
+        self.navigationItem.rightBarButtonItem.title = self.cityName;
+    }
+    
+    [TRLocationManager getUserCityName:^(NSString *cityName) {
+        self.cityName = cityName;
+        [self loadNewDeals];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.navigationItem.rightBarButtonItem.title = self.cityName;
+            [[NSUserDefaults standardUserDefaults]setObject:self.cityName forKey:@"UserLocationCity"];
+        });
+    }];
+}
+-(void)clickCityButton{
+    WHCityGroupTableViewController *cityGroupController = [WHCityGroupTableViewController cityGroupTableViewControllerDidChoice:^(NSString *cityName) {
+        self.cityName = cityName;
+        [self loadNewDeals];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSUserDefaults standardUserDefaults]setObject:self.cityName forKey:@"UserLocationCity"];
+            self.navigationItem.rightBarButtonItem.title = self.cityName;
+        });
+    }];
+    [self.navigationController pushViewController:cityGroupController animated:YES];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 -(void)settingRequestParams:(NSMutableDictionary*)params{
 #warning TODO:设置城市和分类
-    params[@"city"]     = @"北京";
-    params[@"category"] = @"美食";}
+    params[@"city"]= self.cityName;
+    if (params[@"city"]==nil) {
+        params[@"city"]     = @"北京";
+    }
+    
+    params[@"category"] = @"美食";
+
+}
 
 /*
 #pragma mark - Navigation

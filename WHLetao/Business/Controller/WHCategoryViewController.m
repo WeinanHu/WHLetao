@@ -76,6 +76,19 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.metaDataView.mainTableView) {
         [self.metaDataView.subTableView reloadData];
+        WHCategory *category = self.categoryArray[indexPath.row];
+        if (category.subcategories.count ==0) {
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"WHCategoryDidSelect" object:self userInfo:@{@"MainCategory":category}];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }else{
+        WHCategory *category = self.categoryArray[self.metaDataView.mainTableView.indexPathForSelectedRow.row];
+        NSString *subCategoryName = category.subcategories[indexPath.row];
+        if ([subCategoryName isEqualToString:@"全部"]) {
+            subCategoryName = category.name;
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"WHCategoryDidSelect" object:self userInfo:@{@"SubCategoryName":subCategoryName}];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 /*

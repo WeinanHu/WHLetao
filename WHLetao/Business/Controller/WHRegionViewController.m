@@ -92,6 +92,19 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.metaDataView.mainTableView) {
         [self.metaDataView.subTableView reloadData];
+        WHRegion *region = self.regionArray[indexPath.row];
+        if (region.subregions.count==0) {
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"WHRegionDidSelect" object:self userInfo:@{@"mainRegion":region}];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }else{
+        WHRegion *region = self.regionArray[self.metaDataView.mainTableView.indexPathForSelectedRow.row];
+        NSString *subRegionName = region.subregions[indexPath.row];
+        if ([subRegionName isEqualToString:@"全部"]) {
+            subRegionName = region.name;
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"WHRegionDidSelect" object:self userInfo:@{@"subRegionName":subRegionName}];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 - (void)didReceiveMemoryWarning {

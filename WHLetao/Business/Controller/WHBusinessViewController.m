@@ -16,24 +16,31 @@
 #import "WHSearchViewController.h"
 #import "WHMetaDataTool.h"
 @interface WHBusinessViewController ()<UIPopoverPresentationControllerDelegate>
-@property(nonatomic,strong) WHBusinessHeaderView *headerView;
+@property(nonatomic,strong) WHBusinessHeaderView  *headerView ;
 @property(nonatomic,strong) WHSortViewController *sortController;
 @property(nonatomic,strong) WHRegionViewController *regionController;
 @property(nonatomic,strong) WHCategoryViewController *categoryController;
 @property(nonatomic,strong) WHSearchViewController *searchController;
 @property(nonatomic,strong) NSArray *sorts;
+
+//params属性
+@property(nonatomic,strong) NSMutableDictionary *params;
 @end
 
 @implementation WHBusinessViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.y = 50;
+    self.tableView.y += 50;
     [self setUpHeadView];
     [self addTargetsForButton];
     [self addSearchButton];
+    [self listenNotification];
+    
+
+    
 }
+
 #pragma mark - button
 -(void)addSearchButton{
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_search"] style:UIBarButtonItemStyleDone target:self action:@selector(clickSearchButton)];
@@ -70,17 +77,8 @@
     self.sortController.popoverPresentationController.sourceRect = self.headerView.sortButton.bounds;//直接给bounds就行，相当于宽度一半，高度为1倍的位置。
     self.sortController.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp;
     self.sortController.popoverPresentationController.delegate = self;
+    self.sortController.sorts = self.sorts;
     
-    self.sortController.preferredContentSize = CGSizeMake(130, 15+45*self.sorts.count);
-    for(int i = 0;i<self.sorts.count;i++){
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-        [button setBackgroundImage:[UIImage imageNamed:@"btn_filter_normal"] forState:UIControlStateNormal];
-        [button setTitle:((WHSort*)self.sorts[i]).label forState:UIControlStateNormal];
-        button.frame = CGRectMake(15, 15+45*i, 100, 30);
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        button.tag = 100+i;
-        [self.sortController.view addSubview:button];
-    }
     [self presentViewController:self.sortController animated:YES completion:nil];
 }
 -(void)setUpHeadView{
@@ -88,14 +86,67 @@
     self.headerView.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 50);
     [self.view addSubview:self.headerView];
 }
-
+#pragma mark - notification
+-(void)listenNotification{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(sortDidChange:) name:@"WHSortDidChange" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(regionDidSelect:) name:@"WHRegionDidSelect" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(categoryDidSelect:) name:@"WHCategoryDidSelect" object:nil];
+}
+-(void)sortDidChange:(NSNotification*)notification{
+    //获取参数
+    NSNumber *sortValue = notification.userInfo[@"SortValue"];
+    //设置参数
+    self.params[@"sort"]= sortValue;
+    //发送新请求
+    [self loadNewDeals];
+}
+-(void)regionDidSelect:(NSNotification*)notification{
+    WHRegion *region = notification.userInfo[@"mainRegion"];
+    NSString *subRegionName = notification.userInfo[@"subRegionName"];
+    if (region) {
+        if ([region.name isEqualToString:@"全部"]) {
+            self.params[@"region"]=nil;
+        }else{
+            self.params[@"region"]=region.name;
+        }
+    }
+    if (subRegionName) {
+        self.params[@"region"]= subRegionName;
+    }
+    [self loadNewDeals];
+}
+-(void)categoryDidSelect:(NSNotification*)notification{
+    WHCategory *category = notification.userInfo[@"MainCategory"];
+    NSString *subCategoryName = notification.userInfo[@"SubCategoryName"];
+    if (category) {
+        if ([category.name isEqualToString:@"全部分类"]) {
+            self.params[@"category"]=nil;
+        }else{
+            self.params[@"category"]=category.name;
+        }
+    }
+    if (subCategoryName) {
+        self.params[@"category"]= subCategoryName;
+    }
+    [self loadNewDeals];
+}
 #pragma mark - request参数
 -(void)settingRequestParams:(NSMutableDictionary*)params{
 #warning TODO:设置四个参数
-    params[@"city"]     = @"北京";
-    params[@"category"] = @"美食";
-    params[@"region"]   = @"朝阳区";
-    params[@"sort"]     = @2;
+    if (self.params[@"city"]==nil) {
+        self.params[@"city"]=@"北京";
+    }
+//    if (self.params[@"sort"]==nil) {
+//        self.params[@"sort"]=@1;
+//    }
+    
+//    params[@"city"]     = @"北京";
+//    params[@"category"] = @"美食";
+//    params[@"region"]   = @"朝阳区";
+//    params[@"sort"]     = @2;
+    [params setDictionary:self.params];
+//    params = self.params;
+    
 }
 
 #pragma mark - UIPopoverPresentationControllerDelegate
@@ -147,6 +198,14 @@
 		_searchController = [[WHSearchViewController alloc] init];
 	}
 	return _searchController;
+}
+
+- (NSMutableDictionary *)params {
+	if(_params == nil) {
+		_params = [[NSMutableDictionary alloc] init];
+	}
+    
+	return _params;
 }
 
 @end

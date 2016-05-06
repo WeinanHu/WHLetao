@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WHSortViewController : UIViewController
-
+@property(nonatomic,strong) NSArray *sorts;
 @end

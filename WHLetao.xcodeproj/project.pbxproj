@@ -100,6 +100,9 @@
 		B05D47F91CD9EDDF007D78CB /* WHSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05D47F81CD9EDDF007D78CB /* WHSortViewController.m */; };
 		B05D47FC1CD9F89B007D78CB /* WHRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05D47FB1CD9F89B007D78CB /* WHRegionViewController.m */; };
 		B05D47FF1CD9F8A7007D78CB /* WHCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05D47FE1CD9F8A7007D78CB /* WHCategoryViewController.m */; };
+		B0C48D9B1CDC7351005F632D /* TRLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C48D9A1CDC7351005F632D /* TRLocationManager.m */; };
+		B0C48DC41CDC9467005F632D /* WHCityGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C48DC31CDC9467005F632D /* WHCityGroupTableViewController.m */; };
+		B0C48DC71CDC993D005F632D /* WHCityGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C48DC61CDC993D005F632D /* WHCityGroup.m */; };
 		B0E305D61CD87A62003FB6DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E305D51CD87A62003FB6DC /* main.m */; };
 		B0E305D91CD87A62003FB6DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E305D81CD87A62003FB6DC /* AppDelegate.m */; };
 		B0E305DF1CD87A62003FB6DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E305DD1CD87A62003FB6DC /* Main.storyboard */; };
@@ -283,6 +286,12 @@
 		B05D47FB1CD9F89B007D78CB /* WHRegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHRegionViewController.m; sourceTree = "<group>"; };
 		B05D47FD1CD9F8A7007D78CB /* WHCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHCategoryViewController.h; sourceTree = "<group>"; };
 		B05D47FE1CD9F8A7007D78CB /* WHCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHCategoryViewController.m; sourceTree = "<group>"; };
+		B0C48D991CDC7351005F632D /* TRLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLocationManager.h; sourceTree = "<group>"; };
+		B0C48D9A1CDC7351005F632D /* TRLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLocationManager.m; sourceTree = "<group>"; };
+		B0C48DC21CDC9467005F632D /* WHCityGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHCityGroupTableViewController.h; sourceTree = "<group>"; };
+		B0C48DC31CDC9467005F632D /* WHCityGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHCityGroupTableViewController.m; sourceTree = "<group>"; };
+		B0C48DC51CDC993D005F632D /* WHCityGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHCityGroup.h; sourceTree = "<group>"; };
+		B0C48DC61CDC993D005F632D /* WHCityGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHCityGroup.m; sourceTree = "<group>"; };
 		B0E305D11CD87A62003FB6DC /* WHLetao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHLetao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E305D51CD87A62003FB6DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0E305D71CD87A62003FB6DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -678,6 +687,8 @@
 			children = (
 				B0E306171CD892A6003FB6DC /* WHHomeViewController.h */,
 				B0E306181CD892A6003FB6DC /* WHHomeViewController.m */,
+				B0C48DC21CDC9467005F632D /* WHCityGroupTableViewController.h */,
+				B0C48DC31CDC9467005F632D /* WHCityGroupTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -685,6 +696,8 @@
 		B0E305F11CD87C00003FB6DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B0C48DC51CDC993D005F632D /* WHCityGroup.h */,
+				B0C48DC61CDC993D005F632D /* WHCityGroup.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -798,6 +811,8 @@
 		B0E305FD1CD87C01003FB6DC /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				B0C48D991CDC7351005F632D /* TRLocationManager.h */,
+				B0C48D9A1CDC7351005F632D /* TRLocationManager.m */,
 				B05D47F41CD9E78F007D78CB /* WHMetaDataTool.h */,
 				B05D47F51CD9E78F007D78CB /* WHMetaDataTool.m */,
 			);
@@ -858,7 +873,7 @@
 				TargetAttributes = {
 					B0E305D01CD87A62003FB6DC = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = MD98VBR744;
+						DevelopmentTeam = R6G77K9LS4;
 					};
 				};
 			};
@@ -955,6 +970,7 @@
 				B00D7B471CD9A2430090723C /* MJRefreshGifHeader.m in Sources */,
 				B015BD6F1CDAF85B0071EA31 /* WHMetaDataTableViewCell.m in Sources */,
 				B00D7B291CD9A2430090723C /* UIFont+FlatUI.m in Sources */,
+				B0C48D9B1CDC7351005F632D /* TRLocationManager.m in Sources */,
 				B00D7B431CD9A2430090723C /* MJRefreshAutoStateFooter.m in Sources */,
 				B00D7B231CD9A2430090723C /* FUISegmentedControl.m in Sources */,
 				B00D7B5D1CD9A2430090723C /* UIImageView+WebCache.m in Sources */,
@@ -965,6 +981,7 @@
 				B00D7B3F1CD9A2430090723C /* MJRefreshFooter.m in Sources */,
 				B00D7B201CD9A2430090723C /* FUIButton.m in Sources */,
 				B00D7B2B1CD9A2430090723C /* UINavigationBar+FlatUI.m in Sources */,
+				B0C48DC41CDC9467005F632D /* WHCityGroupTableViewController.m in Sources */,
 				B00D7B211CD9A2430090723C /* FUICellBackgroundView.m in Sources */,
 				B00D7B411CD9A2430090723C /* MJRefreshAutoGifFooter.m in Sources */,
 				B05D47F31CD9E656007D78CB /* WHSort.m in Sources */,
@@ -1000,6 +1017,7 @@
 				B00D7B461CD9A2430090723C /* MJRefreshBackStateFooter.m in Sources */,
 				B0E306091CD8904B003FB6DC /* WHBaseNaviController.m in Sources */,
 				B05D47FF1CD9F8A7007D78CB /* WHCategoryViewController.m in Sources */,
+				B0C48DC71CDC993D005F632D /* WHCityGroup.m in Sources */,
 				B00D7B491CD9A2430090723C /* MJRefreshStateHeader.m in Sources */,
 				B00D7B271CD9A2430090723C /* UIBarButtonItem+FlatUI.m in Sources */,
 			);
@@ -1112,11 +1130,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WHLetao/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wayne.WHLetao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wayneHu.WHLetao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1125,11 +1145,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WHLetao/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wayne.WHLetao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wayneHu.WHLetao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
