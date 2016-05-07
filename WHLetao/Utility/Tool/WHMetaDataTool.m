@@ -54,13 +54,43 @@ static NSArray *cityArray = nil;
     }
     return [WHMetaDataTool getModelArrayWithClass:[WHRegion class] withArray:findedCity.regions];
 }
-
++(WHCategory *)getCategoryWithDeal:(WHDeal *)deal{
+    NSArray *arr = deal.categories;
+    
+    WHCategory *retCategory;
+    if (arr.count) {
+        
+        for (NSString *categoryName in arr) {
+            
+            NSArray *categories = [self getAllCategories];
+            for (WHCategory *category in categories) {
+                if ([category.name containsString:categoryName]||[categoryName containsString:category.name]) {
+                    retCategory = category;
+                }
+            }
+        }
+    
+    }else{
+        return nil;
+    }
+    return retCategory;
+}
 static NSArray *categories = nil;
 +(NSArray *)getAllCategories{
     if (!categories) {
         categories = [[self alloc]getAndParseWithPlistFile:@"categories.plist" withClass:[WHCategory class]];
     }
     return categories;
+}
++(NSArray *)getAllBusiness:(WHDeal*)deal{
+    return [self getModelArrayWithClass:[WHBusiness class] withArray:deal.businesses];
+}
+static NSArray *menuArray;
++(NSArray *)getAllMenues{
+    if (!menuArray) {
+        menuArray = [[self alloc]getAndParseWithPlistFile:@"menuData.plist" withClass:[WHMenuData class]];
+    }
+    return menuArray;
 }
 /**
  *  从数组中获取模型数组的封装

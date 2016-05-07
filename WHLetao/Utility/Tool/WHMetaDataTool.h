@@ -13,6 +13,8 @@
 #import "WHRegion.h"
 #import "WHCategory.h"
 #import "WHCityGroup.h"
+#import "WHBusiness.h"
+#import "WHMenuData.h"
 @interface WHMetaDataTool : NSObject
 //给定服务器返回的result数据（字典），返回所有订单模型对象组成的数组（TRDeal）
 +(NSArray*)parseDealsResult:(id)result;
@@ -21,4 +23,7 @@
 +(NSArray*)getAllRegionsByCityName:(NSString*)cityName;
 +(NSArray*)getAllCategories;
 +(NSArray*)getALLCityGroups;
++(NSArray*)getAllBusiness:(WHDeal*)deal;
++(WHCategory*)getCategoryWithDeal:(WHDeal*)deal;
++(NSArray *)getAllMenues;
 @end

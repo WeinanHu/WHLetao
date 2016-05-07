@@ -117,6 +117,13 @@
 		B0E306151CD89289003FB6DC /* WHBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E306141CD89289003FB6DC /* WHBusinessViewController.m */; };
 		B0E306191CD892A6003FB6DC /* WHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E306181CD892A6003FB6DC /* WHHomeViewController.m */; };
 		B0E3061C1CD89810003FB6DC /* WHDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E3061B1CD89810003FB6DC /* WHDeal.m */; };
+		B0FEAC5A1CDD8118003DA8E7 /* WHMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FEAC591CDD8118003DA8E7 /* WHMapViewController.m */; };
+		B0FEAC601CDD93B2003DA8E7 /* WHBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FEAC5F1CDD93B2003DA8E7 /* WHBusiness.m */; };
+		B0FEAC631CDD9684003DA8E7 /* WHAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FEAC621CDD9684003DA8E7 /* WHAnnotation.m */; };
+		B0FEAC661CDDCA3F003DA8E7 /* WHControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FEAC651CDDCA3F003DA8E7 /* WHControl.m */; };
+		B0FEAC681CDDCA4D003DA8E7 /* WHControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0FEAC671CDDCA4D003DA8E7 /* WHControl.xib */; };
+		B0FEAC6B1CDDCCF4003DA8E7 /* WHHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FEAC6A1CDDCCF4003DA8E7 /* WHHomeHeaderView.m */; };
+		B0FEAC6E1CDDD015003DA8E7 /* WHMenuData.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FEAC6D1CDDD015003DA8E7 /* WHMenuData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -319,6 +326,19 @@
 		B0E306181CD892A6003FB6DC /* WHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHHomeViewController.m; sourceTree = "<group>"; };
 		B0E3061A1CD89810003FB6DC /* WHDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDeal.h; sourceTree = "<group>"; };
 		B0E3061B1CD89810003FB6DC /* WHDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDeal.m; sourceTree = "<group>"; };
+		B0FEAC581CDD8118003DA8E7 /* WHMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHMapViewController.h; sourceTree = "<group>"; };
+		B0FEAC591CDD8118003DA8E7 /* WHMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHMapViewController.m; sourceTree = "<group>"; };
+		B0FEAC5E1CDD93B2003DA8E7 /* WHBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHBusiness.h; sourceTree = "<group>"; };
+		B0FEAC5F1CDD93B2003DA8E7 /* WHBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHBusiness.m; sourceTree = "<group>"; };
+		B0FEAC611CDD9684003DA8E7 /* WHAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHAnnotation.h; sourceTree = "<group>"; };
+		B0FEAC621CDD9684003DA8E7 /* WHAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHAnnotation.m; sourceTree = "<group>"; };
+		B0FEAC641CDDCA3F003DA8E7 /* WHControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHControl.h; sourceTree = "<group>"; };
+		B0FEAC651CDDCA3F003DA8E7 /* WHControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHControl.m; sourceTree = "<group>"; };
+		B0FEAC671CDDCA4D003DA8E7 /* WHControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHControl.xib; sourceTree = "<group>"; };
+		B0FEAC691CDDCCF4003DA8E7 /* WHHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHHomeHeaderView.h; sourceTree = "<group>"; };
+		B0FEAC6A1CDDCCF4003DA8E7 /* WHHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHHomeHeaderView.m; sourceTree = "<group>"; };
+		B0FEAC6C1CDDD015003DA8E7 /* WHMenuData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHMenuData.h; sourceTree = "<group>"; };
+		B0FEAC6D1CDDD015003DA8E7 /* WHMenuData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHMenuData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -689,6 +709,8 @@
 				B0E306181CD892A6003FB6DC /* WHHomeViewController.m */,
 				B0C48DC21CDC9467005F632D /* WHCityGroupTableViewController.h */,
 				B0C48DC31CDC9467005F632D /* WHCityGroupTableViewController.m */,
+				B0FEAC581CDD8118003DA8E7 /* WHMapViewController.h */,
+				B0FEAC591CDD8118003DA8E7 /* WHMapViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -698,6 +720,12 @@
 			children = (
 				B0C48DC51CDC993D005F632D /* WHCityGroup.h */,
 				B0C48DC61CDC993D005F632D /* WHCityGroup.m */,
+				B0FEAC5E1CDD93B2003DA8E7 /* WHBusiness.h */,
+				B0FEAC5F1CDD93B2003DA8E7 /* WHBusiness.m */,
+				B0FEAC611CDD9684003DA8E7 /* WHAnnotation.h */,
+				B0FEAC621CDD9684003DA8E7 /* WHAnnotation.m */,
+				B0FEAC6C1CDDD015003DA8E7 /* WHMenuData.h */,
+				B0FEAC6D1CDDD015003DA8E7 /* WHMenuData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -705,6 +733,11 @@
 		B0E305F21CD87C00003FB6DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B0FEAC641CDDCA3F003DA8E7 /* WHControl.h */,
+				B0FEAC651CDDCA3F003DA8E7 /* WHControl.m */,
+				B0FEAC671CDDCA4D003DA8E7 /* WHControl.xib */,
+				B0FEAC691CDDCCF4003DA8E7 /* WHHomeHeaderView.h */,
+				B0FEAC6A1CDDCCF4003DA8E7 /* WHHomeHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -903,6 +936,7 @@
 				B05D47ED1CD9E546007D78CB /* MineInformationData.plist in Resources */,
 				B00D7B361CD9A2430090723C /* Lato-Bold.ttf in Resources */,
 				B05D47E71CD9E546007D78CB /* cities.plist in Resources */,
+				B0FEAC681CDDCA4D003DA8E7 /* WHControl.xib in Resources */,
 				B05D47F01CD9E546007D78CB /* sorts.plist in Resources */,
 				B0E305E41CD87A63003FB6DC /* LaunchScreen.storyboard in Resources */,
 				B0E305E11CD87A63003FB6DC /* Assets.xcassets in Resources */,
@@ -936,6 +970,7 @@
 			files = (
 				B00D7B5C1CD9A2430090723C /* UIImageView+HighlightedWebCache.m in Sources */,
 				B00D7B591CD9A2430090723C /* UIImage+GIF.m in Sources */,
+				B0FEAC631CDD9684003DA8E7 /* WHAnnotation.m in Sources */,
 				B00D7B4B1CD9A2430090723C /* MJRefreshConst.m in Sources */,
 				B00D7B511CD9A2430090723C /* SDImageCache.m in Sources */,
 				B00D7B541CD9A2430090723C /* SDWebImageDownloader.m in Sources */,
@@ -948,9 +983,11 @@
 				B00D7B481CD9A2430090723C /* MJRefreshNormalHeader.m in Sources */,
 				B0E306061CD87E69003FB6DC /* DPRequest.m in Sources */,
 				B00D7B301CD9A2430090723C /* UITabBar+FlatUI.m in Sources */,
+				B0FEAC5A1CDD8118003DA8E7 /* WHMapViewController.m in Sources */,
 				B00D7B221CD9A2430090723C /* FUIPopoverBackgroundView.m in Sources */,
 				B00D7B3C1CD9A2430090723C /* MJRefreshAutoFooter.m in Sources */,
 				B00D7B551CD9A2430090723C /* SDWebImageDownloaderOperation.m in Sources */,
+				B0FEAC601CDD93B2003DA8E7 /* WHBusiness.m in Sources */,
 				B015BD661CDAD9400071EA31 /* WHCity.m in Sources */,
 				B00D7B2A1CD9A2430090723C /* UIImage+FlatUI.m in Sources */,
 				B015BD761CDB39FF0071EA31 /* WHSearchViewController.m in Sources */,
@@ -969,6 +1006,7 @@
 				B00D7B281CD9A2430090723C /* UIColor+FlatUI.m in Sources */,
 				B00D7B471CD9A2430090723C /* MJRefreshGifHeader.m in Sources */,
 				B015BD6F1CDAF85B0071EA31 /* WHMetaDataTableViewCell.m in Sources */,
+				B0FEAC661CDDCA3F003DA8E7 /* WHControl.m in Sources */,
 				B00D7B291CD9A2430090723C /* UIFont+FlatUI.m in Sources */,
 				B0C48D9B1CDC7351005F632D /* TRLocationManager.m in Sources */,
 				B00D7B431CD9A2430090723C /* MJRefreshAutoStateFooter.m in Sources */,
@@ -1012,8 +1050,10 @@
 				B05D47F91CD9EDDF007D78CB /* WHSortViewController.m in Sources */,
 				B0E305D61CD87A62003FB6DC /* main.m in Sources */,
 				B00D7B2C1CD9A2430090723C /* UIPopoverController+FlatUI.m in Sources */,
+				B0FEAC6B1CDDCCF4003DA8E7 /* WHHomeHeaderView.m in Sources */,
 				B00D7B561CD9A2430090723C /* SDWebImageManager.m in Sources */,
 				B05D47F61CD9E78F007D78CB /* WHMetaDataTool.m in Sources */,
+				B0FEAC6E1CDDD015003DA8E7 /* WHMenuData.m in Sources */,
 				B00D7B461CD9A2430090723C /* MJRefreshBackStateFooter.m in Sources */,
 				B0E306091CD8904B003FB6DC /* WHBaseNaviController.m in Sources */,
 				B05D47FF1CD9F8A7007D78CB /* WHCategoryViewController.m in Sources */,

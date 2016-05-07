@@ -117,7 +117,20 @@
     cell.deal = deal;
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIWebView *webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
+    WHDeal *deal = self.dealsArray[indexPath.row];
+    NSURL *url = [NSURL URLWithString:deal.deal_h5_url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [webView loadRequest:request];
+    UIViewController *vc = [UIViewController new];
+    [vc.view addSubview:webView];
+    
+//    self.tabBarController.hidesBottomBarWhenPushed = YES;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
 }
